@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
-import krishVideo from '../assets/Krish-video.mp4';
 import './BackgroundVideo.css';
 
 const BackgroundVideo = ({ videoSrc }) => {

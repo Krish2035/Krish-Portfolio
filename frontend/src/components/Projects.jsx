@@ -21,7 +21,8 @@ const projectsData = [
     github: 'https://github.com/Krish2035/Jarvis',
     demo: 'https://jarvis-zk6d.vercel.app/',
     featured: true,
-    accentColor: '#14b8a6'
+    accentColor: '#14b8a6',
+    bgImage: '/projects/jarvis-preview.png'
   },
   {
     id: 2,
@@ -33,7 +34,8 @@ const projectsData = [
     github: 'https://github.com/Krish2035/AI-Chatbot',
     demo: 'https://ai-chatbot-nine-delta.vercel.app/',
     featured: true,
-    accentColor: '#6366f1'
+    accentColor: '#6366f1',
+    bgImage: '/projects/neurochat-preview.png'
   },
   {
     id: 3,
@@ -45,7 +47,8 @@ const projectsData = [
     github: 'https://github.com/Krish2035/AI-Chatbot-voiceflow',
     demo: 'https://ai-chatbot-voiceflow.vercel.app/',
     featured: false,
-    accentColor: '#06b6d4'
+    accentColor: '#06b6d4',
+    bgImage: '/projects/voiceflow-preview.png'
   },
   {
     id: 4,
@@ -57,7 +60,8 @@ const projectsData = [
     github: 'https://github.com/Krish2035/whatsapp-clone',
     demo: 'https://whatsapp-clone-nu-lyart.vercel.app/',
     featured: false,
-    accentColor: '#10b981'
+    accentColor: '#10b981',
+    bgImage: '/projects/whatsapp-preview.png'
   }
 ];
 
@@ -85,50 +89,82 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <div className="project-card-header">
-                <div className="project-header-left">
-                  <div className="project-icon-box" style={{ color: project.accentColor, borderColor: `${project.accentColor}33`, background: `${project.accentColor}15` }}>
-                    {project.icon}
+              {/* Project Screenshot Background Image */}
+              <div className="project-card-bg">
+                <img
+                  src={project.bgImage}
+                  alt={`${project.title} Preview`}
+                  className="project-bg-img"
+                  loading="lazy"
+                />
+                <div
+                  className="project-bg-overlay"
+                  style={{
+                    background: `linear-gradient(165deg, rgba(8, 12, 22, 0.88) 0%, rgba(10, 15, 28, 0.84) 45%, rgba(8, 12, 22, 0.95) 100%)`
+                  }}
+                />
+              </div>
+
+              <div className="project-card-content">
+                <div className="project-card-header">
+                  <div className="project-header-left">
+                    <div
+                      className="project-icon-box"
+                      style={{
+                        color: project.accentColor,
+                        borderColor: `${project.accentColor}44`,
+                        background: `${project.accentColor}20`
+                      }}
+                    >
+                      {project.icon}
+                    </div>
+                    <span
+                      className="project-badge"
+                      style={{
+                        color: project.accentColor,
+                        borderColor: `${project.accentColor}50`,
+                        background: `${project.accentColor}22`
+                      }}
+                    >
+                      {project.category}
+                    </span>
                   </div>
-                  <span className="project-badge" style={{ color: project.accentColor, borderColor: `${project.accentColor}40`, background: `${project.accentColor}15` }}>
-                    {project.category}
-                  </span>
+                  {project.featured && (
+                    <span className="featured-pill">
+                      <Sparkles size={11} /> Featured
+                    </span>
+                  )}
                 </div>
-                {project.featured && (
-                  <span className="featured-pill">
-                    <Sparkles size={11} /> Featured
-                  </span>
-                )}
-              </div>
-              
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-description">{project.description}</p>
+                
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
 
-              <div className="project-tags">
-                {project.tags.map((tag) => (
-                  <span key={tag} className="tag-pill">{tag}</span>
-                ))}
-              </div>
+                <div className="project-tags">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="tag-pill">{tag}</span>
+                  ))}
+                </div>
 
-              <div className="project-links">
-                <a
-                  href={project.github}
-                  className="project-link-btn"
-                  title="View Source Code on GitHub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GithubIcon size={16} /> Code
-                </a>
-                <a
-                  href={project.demo}
-                  className="project-link-btn primary"
-                  title="View Live Demo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink size={16} /> Live Demo
-                </a>
+                <div className="project-links">
+                  <a
+                    href={project.github}
+                    className="project-link-btn"
+                    title="View Source Code on GitHub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GithubIcon size={16} /> Code
+                  </a>
+                  <a
+                    href={project.demo}
+                    className="project-link-btn primary"
+                    title="View Live Demo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink size={16} /> Live Demo
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
