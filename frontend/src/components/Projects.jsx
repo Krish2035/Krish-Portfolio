@@ -97,12 +97,7 @@ const Projects = () => {
                   className="project-bg-img"
                   loading="lazy"
                 />
-                <div
-                  className="project-bg-overlay"
-                  style={{
-                    background: `linear-gradient(165deg, rgba(8, 12, 22, 0.88) 0%, rgba(10, 15, 28, 0.84) 45%, rgba(8, 12, 22, 0.95) 100%)`
-                  }}
-                />
+                <div className="project-bg-overlay" />
               </div>
 
               <div className="project-card-content">
