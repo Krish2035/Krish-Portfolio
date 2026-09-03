@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="app-main-wrapper">
       {/* Layer 0: Background Video */}
-      <BackgroundVideo videoSrc="/bg-video.mp4" />
+      <BackgroundVideo videoSrc="/Krish-video.mp4" />
 
       {/* Layer 1: 3D Animated Canvas (Three.js) */}
       <ThreeCanvas />

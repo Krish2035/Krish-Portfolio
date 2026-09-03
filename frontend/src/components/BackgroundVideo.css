@@ -32,6 +32,55 @@
   visibility: hidden !important;
 }
 
+/* Floating Sound Toggle Button */
+.sound-toggle-btn {
+  position: fixed;
+  top: 90px;
+  right: 28px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 24, 38, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
+  pointer-events: auto;
+}
+
+.sound-toggle-btn:hover {
+  background: rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.35);
+}
+
+.sound-toggle-btn.muted {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: rgba(239, 68, 68, 0.45);
+  color: #fca5a5;
+  animation: pulseSoundAlert 2s infinite ease-in-out;
+}
+
+.sound-toggle-btn.unmuted {
+  background: rgba(20, 184, 166, 0.18);
+  border-color: rgba(20, 184, 166, 0.45);
+  color: #2dd4bf;
+}
+
+@keyframes pulseSoundAlert {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+}
+
 /* Status Badges */
 .scroll-lock-badge,
 .scroll-unlocked-badge {
@@ -90,6 +139,16 @@
 .skip-intro-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .sound-toggle-btn {
+    top: auto;
+    bottom: 68px;
+    right: 16px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
