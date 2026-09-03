@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#121826"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <filter id="glow512" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded canvas -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad512)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="url(#primaryGrad512)" stroke-width="6" stroke-opacity="0.45"/>
+
+  <!-- Code Bracket Left -->
+  <path d="M 165 186 L 118 256 L 165 326" fill="none" stroke="#a5b4fc" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  
+  <!-- Central Letter K with glow -->
+  <g filter="url(#glow512)">
+    <path d="M 218 176 L 218 336" fill="none" stroke="url(#primaryGrad512)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M 298 181 L 228 256 L 303 336" fill="none" stroke="url(#primaryGrad512)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Code Bracket Right -->
+  <path d="M 347 186 L 394 256 L 347 326" fill="none" stroke="#2dd4bf" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+
+  <!-- Glowing Dot -->
+  <circle cx="390" cy="120" r="14" fill="#14b8a6"/>
+</svg>
