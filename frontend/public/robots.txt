@@ -1,0 +1,9 @@
+# Robots.txt for Krish Padshala Portfolio
+# Canonical URL: https://krish-portfolio-blond-alpha.vercel.app
+
+User-agent: *
+Allow: /
+
+# Direct Googlebot and Bingbot to the XML sitemap
+Sitemap: https://krish-portfolio-blond-alpha.vercel.app/sitemap.xml
+

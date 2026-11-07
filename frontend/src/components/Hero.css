@@ -18,6 +18,32 @@
   margin-top: 140px;
 }
 
+.hero-badge-wrap {
+  margin-bottom: 1.1rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(99, 102, 241, 0.14);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  color: #c7d2fe;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
+}
+
+.badge-sparkle {
+  color: #38bdf8;
+}
+
 .hero-title {
   font-size: clamp(2.3rem, 4.5vw, 3.8rem);
   font-weight: 800;

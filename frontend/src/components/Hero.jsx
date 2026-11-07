@@ -1,14 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, Terminal } from 'lucide-react';
+import { ArrowRight, Mail, Terminal, Sparkles } from 'lucide-react';
 import './Hero.css';
-
 
 const Hero = () => {
   return (
     <section id="hero" className="hero-section">
+      <div id="about" className="hero-about-anchor" style={{ position: 'absolute', top: 0 }} />
       <div className="container hero-container">
-
+        {/* SEO & Brand Recognition Badge */}
+        <motion.div
+          className="hero-badge-wrap"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="hero-badge">
+            <Sparkles size={14} className="badge-sparkle" /> Krish Padshala Portfolio
+          </span>
+        </motion.div>
 
         {/* Main Heading */}
         <motion.h1
@@ -17,8 +27,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Crafting High-Performance <br />
-          <span className="gradient-text">Full-Stack Web</span> Experiences
+          Krish Padshala <br />
+          <span className="gradient-text">Full-Stack &amp; AI</span> Developer
         </motion.h1>
 
         {/* Subtitle */}
@@ -28,7 +38,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Hi, I'm <strong className="text-white">Krish</strong>. I architect resilient web applications using modern full-stack technologies (React, Vite, Node.js, Express, MongoDB) enhanced with immersive Three.js geometries and smooth Framer Motion animations.
+          Hi, I'm <strong className="text-white">Krish Padshala</strong>. I architect resilient web applications using modern full-stack technologies (React, Next.js, Node.js, Express, MongoDB) enhanced with immersive Three.js geometries and smooth Framer Motion animations.
         </motion.p>
 
         {/* Action Buttons */}

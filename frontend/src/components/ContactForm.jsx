@@ -92,7 +92,7 @@ const ContactForm = () => {
           </span>
           <h2 className="section-title">Let's Connect & Work Together</h2>
           <p className="section-description">
-            Recruiters and hiring managers can reach me directly using the form below. Messages are delivered straight to my email inbox at krishpadshala2035@gmail.com.
+            Recruiters, hiring managers, and collaborators can reach Krish Padshala directly using the form below. Messages are delivered straight to my email inbox at krishpadshala2035@gmail.com.
           </p>
         </div>
 

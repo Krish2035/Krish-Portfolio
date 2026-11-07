@@ -60,11 +60,11 @@ const Navbar = () => {
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <div className="nav-container">
-        <a href="#" className="nav-logo">
+        <a href="#hero" className="nav-logo" title="Krish Padshala Portfolio" aria-label="Krish Padshala Portfolio">
           <div className="logo-icon-box">
             <Code2 size={20} className="logo-icon" />
           </div>
-          <span className="logo-text">Krish<span className="logo-dot">.dev</span></span>
+          <span className="logo-text">Krish<span className="logo-dot"> Padshala</span></span>
         </a>
 
         {/* Desktop Navigation */}

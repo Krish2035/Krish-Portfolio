@@ -40,7 +40,7 @@ const Skills = () => {
           </span>
           <h2 className="section-title">Technical Proficiency</h2>
           <p className="section-description">
-            A comprehensive overview of my core technology stack for modern full-stack application development.
+            A comprehensive overview of Krish Padshala's core technology stack for modern full-stack and 3D web application development.
           </p>
         </div>
 

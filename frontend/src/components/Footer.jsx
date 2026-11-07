@@ -27,9 +27,9 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="container footer-content">
         <div className="footer-left">
-          <p className="footer-logo">Krish<span>.dev</span></p>
+          <p className="footer-logo">Krish Padshala<span>.dev</span></p>
           <p className="footer-copy">
-            © {new Date().getFullYear()} Krish. Built with React, Vite, Three.js, Framer Motion, Node & Express.
+            © {new Date().getFullYear()} Krish Padshala. All rights reserved. Full-Stack Developer &amp; AI Engineer.
           </p>
         </div>
 

@@ -75,7 +75,7 @@ const Projects = () => {
           </span>
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-description">
-            A showcase of production-ready AI agents, voice assistants, real-time communications, and modern web applications.
+            A showcase of production-ready AI agents, neural interfaces, real-time communications, and modern web applications built by Krish Padshala.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ const Projects = () => {
               <div className="project-card-bg">
                 <img
                   src={project.bgImage}
-                  alt={`${project.title} Preview`}
+                  alt={`${project.title} - Project by Krish Padshala`}
                   className="project-bg-img"
                   loading="lazy"
                 />
